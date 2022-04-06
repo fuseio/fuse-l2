@@ -26,6 +26,13 @@ coverage
 node_modules
 bower_components
 
+# Db
+db
+db/
+
+# Compiled js
+out
+
 # Editors
 .idea
 *.iml
@@ -39,3 +46,5 @@ dist/**/*
 
 # ignore yarn.lock
 yarn.lock
+
+db/*
