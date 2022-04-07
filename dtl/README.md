@@ -301,3 +301,46 @@ GET /batch/stateroot/index/{index: number}
     ]
 }
 ```
+
+
+
+## Fuse Logs
+
+
+```
+❯ yarn start
+yarn run v1.22.17
+$ ts-node ./src/services/run.ts
+{"level":30,"time":1649314358677,"msg":"Service is starting..."}
+{"level":30,"time":1649314358678,"msg":"Service is initializing..."}
+{"level":30,"time":1649314358678,"msg":"Initializing L1 Data Transport Service..."}
+{"level":30,"time":1649314358701,"msg":"L2 chain ID is: 987"}
+{"level":30,"time":1649314358702,"msg":"BSS HF1 will activate at: 0"}
+{"level":30,"time":1649314358713,"msg":"Service is initializing..."}
+{"level":30,"time":1649314358722,"defaultBackend":"l1","l1GasPriceBackend":"l1","msg":"HTTP Server Options"}
+{"level":30,"time":1649314358722,"url":"https://rpc.fuse.io","msg":"HTTP Server L1 RPC Provider initialized"}
+{"level":40,"time":1649314358722,"msg":"HTTP Server L2 RPC Provider not initialized"}
+{"level":30,"time":1649314358723,"msg":"Service has initialized."}
+{"level":30,"time":1649314358723,"msg":"Service is initializing..."}
+{"level":30,"time":1649314358723,"addressManager":"0xE2eaBc78232429D81eb319bB3e93abe14B8a4726","msg":"Using AddressManager"}
+{"level":30,"time":1649314360412,"startingL1BlockNumber":1,"msg":"Starting sync"}
+{"level":30,"time":1649314360782,"msg":"Service has initialized."}
+{"level":30,"time":1649314360782,"msg":"Service has initialized."}
+{"level":30,"time":1649314360782,"msg":"Service is starting..."}
+{"level":30,"time":1649314360782,"msg":"Service is starting..."}
+{"level":30,"time":1649314360784,"host":"0.0.0.0","port":7879,"msg":"Server started and listening"}
+{"level":30,"time":1649314360784,"msg":"Service has started"}
+{"level":30,"time":1649314361103,"highestSyncedL1Block":8001,"targetL1Block":10001,"msg":"Synchronizing events from Layer 1 (Ethereum)"}
+{"level":30,"time":1649314364364,"highestSyncedL1Block":10001,"targetL1Block":12001,"msg":"Synchronizing events from Layer 1 (Ethereum)"}
+{"level":30,"time":1649314367661,"highestSyncedL1Block":12001,"targetL1Block":14001,"msg":"Synchronizing events from Layer 1 (Ethereum)"}
+{"level":30,"time":1649314370957,"highestSyncedL1Block":14001,"targetL1Block":16001,"msg":"Synchronizing events from Layer 1 (Ethereum)"}
+{"level":30,"time":1649314374199,"highestSyncedL1Block":16001,"targetL1Block":18001,"msg":"Synchronizing events from Layer 1 (Ethereum)"}
+^C"{"msg": "SIGINT - Stopping data-transport layer"}"
+{"level":30,"time":1649314376773,"msg":"Service is stopping..."}
+{"level":30,"time":1649314376774,"msg":"Service is stopping..."}
+{"level":30,"time":1649314376774,"msg":"Service is stopping..."}
+{"level":30,"time":1649314376775,"msg":"Service has stopped"}
+{"level":30,"time":1649314376775,"msg":"Service has stopped"}
+{"level":30,"time":1649314376776,"msg":"Service has stopped"}
+
+```

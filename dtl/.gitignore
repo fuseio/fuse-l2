@@ -28,7 +28,6 @@ bower_components
 
 # Db
 db
-db/
 
 # Compiled js
 out
