@@ -1,7 +1,7 @@
 {
     "commit": "0000000000000000000000000000000000000000",
     "config": {
-        "chainId": 987,
+        "chainId": 125,
         "homesteadBlock": 0,
         "eip150Block": 0,
         "eip155Block": 0,

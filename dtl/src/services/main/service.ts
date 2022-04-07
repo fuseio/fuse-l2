@@ -13,7 +13,7 @@ import { BSS_HF1_INDEX } from '../../config'
 
 export interface L1DataTransportServiceOptions {
   nodeEnv: string
-  ethNetworkName?: 'mainnet' | 'kovan' | 'goerli'
+  ethNetworkName?: 'mainnet' | 'kovan' | 'goerli' | 'fuse'
   release: string
   addressManager: string
   confirmations: number
