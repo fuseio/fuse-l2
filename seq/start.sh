@@ -7,7 +7,8 @@ RETRIES=${RETRIES:-40}
 VERBOSITY=${VERBOSITY:-6}
 
 # get the genesis file from the deployer
-# commented, we are doing manually
+# commented, we are doing manually, added here in the genesis.json
+
 # curl \
 #     --fail \
 #     --show-error \
@@ -20,15 +21,15 @@ VERBOSITY=${VERBOSITY:-6}
 #     -o genesis.json
 
 # wait for the dtl to be up, else geth will crash if it cannot connect
-curl \
-    --fail \
-    --show-error \
-    --silent \
-    --output /dev/null \
-    --retry-connrefused \
-    --retry $RETRIES \
-    --retry-delay 1 \
-    $ROLLUP_CLIENT_HTTP
+# curl \
+#     --fail \
+#     --show-error \
+#     --silent \
+#     --output /dev/null \
+#     --retry-connrefused \
+#     --retry $RETRIES \
+#     --retry-delay 1 \
+#     $ROLLUP_CLIENT_HTTP
 
 # import the key that will be used to locally sign blocks
 # this key does not have to be kept secret in order to be secure
@@ -45,6 +46,7 @@ geth --verbosity="$VERBOSITY" "$@" init genesis.json
 # start the geth node
 echo "Starting Geth node"
 exec geth \
+  --nousb \
   --verbosity="$VERBOSITY" \
   --password ./password \
   --allow-insecure-unlock \

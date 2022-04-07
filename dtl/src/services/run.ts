@@ -6,7 +6,7 @@ import Config from 'bcfg'
 /* Imports: Internal */
 import { L1DataTransportService } from './main/service'
 
-type ethNetwork = 'mainnet' | 'kovan' | 'goerli'
+type ethNetwork = 'mainnet' | 'kovan' | 'goerli' | 'fuse'
 ;(async () => {
   try {
     dotenv.config()
