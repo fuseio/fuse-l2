@@ -37,15 +37,16 @@ VERBOSITY=${VERBOSITY:-6}
 echo "Importing private key"
 echo $BLOCK_SIGNER_KEY > key.prv
 echo "pwd" > password
-geth account import --password ./password ./key.prv
+./build/bin/geth account import --password ./password ./key.prv
 
 # initialize the geth node with the genesis file
 echo "Initializing Geth node"
-geth --verbosity="$VERBOSITY" "$@" init genesis.json
+./build/bin/geth --verbosity="$VERBOSITY" "$@" init genesis.json
 
 # start the geth node
 echo "Starting Geth node"
-exec geth \
+./build/bin/geth \
+  --rpc \
   --nousb \
   --verbosity="$VERBOSITY" \
   --password ./password \

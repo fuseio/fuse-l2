@@ -12,6 +12,11 @@ GOBIN = ./build/bin
 GO ?= latest
 GORUN = env GO111MODULE=on go run
 
+check:
+	curl -X POST -H "Content-Type: application/json" --data \
+		'{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' \
+		http://localhost:8545
+
 geth:
 	$(GORUN) build/ci.go install ./cmd/geth
 	@echo "Done building."
