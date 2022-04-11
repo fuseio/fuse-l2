@@ -48,6 +48,8 @@ echo "Starting Geth node"
 ./build/bin/geth \
   --rpc \
   --nousb \
+  --rpcport 8545 \
+  --networkid=125 \
   --verbosity="$VERBOSITY" \
   --password ./password \
   --allow-insecure-unlock \
